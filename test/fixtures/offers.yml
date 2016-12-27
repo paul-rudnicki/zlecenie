@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  price: 9.99
+  realization: MyString
+  status: false
+  user_id: 
+  advertisment_id: 
+
+two:
+  content: MyText
+  price: 9.99
+  realization: MyString
+  status: false
+  user_id: 
+  advertisment_id: 
