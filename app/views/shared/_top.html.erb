@@ -1,0 +1,63 @@
+<section class="top-wrapper skin-background-color1 skin-font-color2">
+	<div class="top">
+		<div class="center">
+			<%= image_tag('logo.png', alt: 'logo', class: 'logo') %>
+			<ul class="logo-menu">
+				<li><a href="#" class="skin-font-color4 skin-color-hover2 bold">Zlecenia</a></li>
+				<li><a href="#" class="skin-font-color3 skin-color-hover2">Usługi</a></li>
+				<li><a href="#" class="skin-font-color3 skin-color-hover2">Praca</a></li>
+				<li><a href="#" class="skin-font-color3 skin-color-hover2">Współpraca</a></li>
+			</ul>
+
+			<ul class="user-menu bold">
+				<li><a href="#" class="skin-font-color2 skin-color-hover2">Zarejestruj się</a></li>
+				<li><%= link_to "Wyloguj się", wyloguj_path, class: 'skin-font-color2 skin-color-hover2' %></li>
+				<li><a href="#" class="skin-font-color2 skin-color-hover2 login-show">Zaloguj się</a></li>
+			</ul>
+			
+			<div class="top-login skin-background-color4">
+				<form method="post" class="login-form">
+					<input type="text" class="skin-border-color4 skin-font-color13" placeholder="Adres e-mail">
+					<input type="password" class="skin-border-color4 skin-font-color13" placeholder="Hasło">
+					<input type="submit"  value="Zaloguj się" class="skin-background-color1 skin-font-color3 skin-background-hover5 skin-color-hover3"/>
+				</form>
+				<a href="#" class="skin-background-color6 skin-font-color2 skin-background-hover5 skin-color-hover3 facebook">Zaloguj się przez Facebook </a>
+				<a href="#" class="skin-font-color8 forgot-password">Zapomniałem hasła</a>
+				<a href="#" class="skin-font-color8 login-close">Zamknij okno</a>
+			</div>
+			
+		</div>
+	</div>
+	<div class="top-menu skin-background-color3">
+		<div class="center">
+			<ul class="choose skin-border-color2">
+				<li><a href="#" class="skin-font-color1 skin-background-hover2 menu-current">Strona Główna</a></li>
+				<li><a href="#" class="skin-font-color1 skin-background-hover2">Strony internetowe</a></li>
+				<li><a href="#" class="skin-font-color1 skin-background-hover2">Grafika</a></li>
+				<li><a href="#" class="skin-font-color1 skin-background-hover2">Aplikacje</a></li>
+				<li><a href="#" class="skin-font-color1 skin-background-hover2">Administracja, wdrożenia</a></li>
+				<li><a href="#" class="skin-font-color1 skin-background-hover2">Prace edytorskie</a></li>
+				<li><a href="#" class="skin-font-color1 skin-background-hover2">Marketing, reklama</a></li>
+				<li><a href="#" class="skin-font-color1 skin-background-hover2">Pozostałe</a></li>
+			</ul>
+			<ul class="buttons">
+				<li><a href="#" class="skin-font-color2 skin-background-color9 skin-background-hover2 skin-color-hover1 bold choose-mobile-button">Główne menu</a></li>
+				<li><a href="#" class="skin-font-color1 skin-background-color4 skin-background-hover2 bold">Dodaj ogłoszenie</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<ul class="mobile-menu">
+		<li><a href="#" class="skin-font-color2 skin-color-hover2 menu-current bold">Strona Główna</a></li>
+		<li><a href="#" class="skin-font-color2 skin-color-hover2">Strony internetowe</a></li>
+		<li><a href="#" class="skin-font-color2 skin-color-hover2">Grafika</a></li>
+		<li><a href="#" class="skin-font-color2 skin-color-hover2">Aplikacje</a></li>
+		<li><a href="#" class="skin-font-color2 skin-color-hover2">Administracja, wdrożenia</a></li>
+		<li><a href="#" class="skin-font-color2 skin-color-hover2">Prace edytorskie</a></li>
+		<li><a href="#" class="skin-font-color2 skin-color-hover2">Marketing, reklama</a></li>
+		<li><a href="#" class="skin-font-color2 skin-color-hover2">Pozostałe</a></li>
+		<li><a href="#" class="skin-font-color9 skin-color-hover2 bold mobile-user">Zarejestruj sie</a></li>
+		<li><a href="#" class="skin-font-color9 skin-color-hover2 bold mobile-user">Zaloguj sie</a></li>
+	</ul>
+	
+</section>

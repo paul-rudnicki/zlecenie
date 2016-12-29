@@ -14,3 +14,11 @@ user = User.create!(
 	email: 'pawelrudnicki79@gmail.com',
 	password: 'password'
 )
+
+user = User.create!(
+	name: 'Tomasz',
+	surname: 'Nowacki',
+	login: 'tomasz',
+	email: 'tomasz@gmail.com',
+	password: 'password'
+)
