@@ -9,22 +9,7 @@
 				<li><a href="#" class="skin-font-color3 skin-color-hover2">Współpraca</a></li>
 			</ul>
 
-			<ul class="user-menu bold">
-				<li><a href="#" class="skin-font-color2 skin-color-hover2">Zarejestruj się</a></li>
-				<li><%= link_to "Wyloguj się", wyloguj_path, class: 'skin-font-color2 skin-color-hover2' %></li>
-				<li><a href="#" class="skin-font-color2 skin-color-hover2 login-show">Zaloguj się</a></li>
-			</ul>
-			
-			<div class="top-login skin-background-color4">
-				<form method="post" class="login-form">
-					<input type="text" class="skin-border-color4 skin-font-color13" placeholder="Adres e-mail">
-					<input type="password" class="skin-border-color4 skin-font-color13" placeholder="Hasło">
-					<input type="submit"  value="Zaloguj się" class="skin-background-color1 skin-font-color3 skin-background-hover5 skin-color-hover3"/>
-				</form>
-				<a href="#" class="skin-background-color6 skin-font-color2 skin-background-hover5 skin-color-hover3 facebook">Zaloguj się przez Facebook </a>
-				<a href="#" class="skin-font-color8 forgot-password">Zapomniałem hasła</a>
-				<a href="#" class="skin-font-color8 login-close">Zamknij okno</a>
-			</div>
+			<%= render 'shared/user_logged' %>
 			
 		</div>
 	</div>

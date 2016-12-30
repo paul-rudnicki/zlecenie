@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 
+gem 'kaminari', '~> 0.16.3'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

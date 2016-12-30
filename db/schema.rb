@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161227141756) do
+ActiveRecord::Schema.define(version: 20161230203308) do
 
   create_table "advertisment_categories", force: :cascade do |t|
     t.integer  "advertisment_id"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 20161227141756) do
     t.integer  "user_id"
     t.datetime "created_at",                                          null: false
     t.datetime "updated_at",                                          null: false
+    t.integer  "winner"
+    t.boolean  "closed",                              default: false
   end
 
   add_index "advertisments", ["slug"], name: "index_advertisments_on_slug", unique: true

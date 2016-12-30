@@ -2,19 +2,41 @@
 	<div class="sidebar">
 		<span class="font-18px skin-font-color1 bold">Panel użytkownika</span>
 		<ul class="panel-menu">
-			<li class="skin-border-color5"><a href="#" class="skin-font-color1 skin-background-hover8">Kokpit</a></li>
+			<li class="skin-border-color5">
+				<%= link_to "Kokpit", panel_path, class: 'skin-font-color1 skin-background-hover8' %>
+			</li>
 			<!-- <li class="skin-border-color5"><a href="#" class="skin-font-color1 skin-background-hover8 panel-menu-current bold">Kokpit</a></li> -->
 			<li class="skin-border-color5"><a href="#" class="skin-font-color1 skin-background-hover8">Twoje ogłoszenia</a>
 				<ul>
-					<li><%= link_to "Aktywne", panel_ogloszenia_path, class: 'skin-font-color9 bold' %></li>
-					<li><a href="#" class="skin-font-color1 skin-color-hover4">/ Oczekujące na zwycięzcę</a></li>
-					<li><a href="#" class="skin-font-color1 skin-color-hover4">/ Zakończone</a></li>
-					<li><a href="#" class="skin-font-color1 skin-color-hover4">/ Archiwum</a></li>
+					<!-- <li><%#= link_to "Aktywne", panel_ogloszenia_path, class: 'skin-font-color9 bold' %></li> -->
+					<li>
+						<%= link_to "/ Oczekujące na moderacje", panel_ogloszenia_path(status: 'waiting_mod'), class: 'skin-font-color1 skin-color-hover4' %>
+					</li>
+					<li>
+						<%= link_to "/ Aktywne", panel_ogloszenia_path, class: 'skin-font-color1 skin-color-hover4' %>
+					</li>
+					<li>
+						<%= link_to "/ Oczekujące na zwycięzcę", panel_ogloszenia_path(status: 'waiting_winner'), class: 'skin-font-color1 skin-color-hover4' %>
+					</li>
+					<li>
+						<%= link_to "/ Zakończone", panel_ogloszenia_path(status: 'ended'), class: 'skin-font-color1 skin-color-hover4' %>
+					</li>
+					<!-- <li><a href="#" class="skin-font-color1 skin-color-hover4">/ Archiwum</a></li> -->
 				</ul>
-			
 			</li>
-			<li class="skin-border-color5">
-				<%= link_to "Twoje ogłoszenia", panel_ogloszenia_path, class: 'skin-font-color1 skin-background-hover8' %>
+			<li class="skin-border-color5"><a href="#" class="skin-font-color1 skin-background-hover8 panel-menu-current bold">Twoje oferty</a>
+				<ul>
+					<li>
+						<%= link_to "/ Aktywne", panel_oferty_path, class: 'skin-font-color1 skin-background-hover8' %>
+					</li>
+					<li>
+						<%= link_to "/ Wygrane", panel_oferty_path(status: 'won'), class: 'skin-font-color1 skin-background-hover8' %>
+					</li>
+					<li>
+						<%= link_to "/ Zakończone", panel_oferty_path(status: 'ended'), class: 'skin-font-color1 skin-background-hover8' %>
+					</li>
+				</ul>
+			</li>
 			<li class="skin-border-color5">
 				<%= link_to "Twoje oferty", panel_oferty_path, class: 'skin-font-color1 skin-background-hover8' %>
 			</li>
