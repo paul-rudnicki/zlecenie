@@ -1,0 +1,25 @@
+<% if @advertisments.any? %>
+	<ul class="ad-list">
+		<% @advertisments.each do |advertisment| %>
+			<li class="ad-prev">
+				<span class="skin-font-color9 semibold font-12px">Zlecenie: </span><span class="semibold font-12px"><%= advertisment.title %></span>
+				<div class="meta-info">
+					<span class="bold">Kategorie: </span><span class="second-span">
+					<% advertisment.categories.each do |category| %>
+						<%= category.name %>
+					<% end %>
+					</span>
+					<span class="bold">Lokalizacja: </span><span class="second-span">
+						<% advertisment.geolocations.each do |geolocation| %>
+							<%= geolocation.name %>
+						<% end %>
+					</span>
+					<span class="bold">Budżet: </span><span class="second-span"><%= advertisment.price %>zł</span> 	
+					<span class="bold">Wystawione: </span><span class="second-span"><%= date_issue advertisment.created_at %></span>
+				</div>
+			</li>
+		<% end %>
+	</ul>
+<% else %>
+	<%= render 'empty' %>
+<% end %>

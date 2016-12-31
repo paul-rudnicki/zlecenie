@@ -1,29 +1,16 @@
 <div class="three-fourth main-text panel-content last">
-	<span class="font-18px skin-font-color1 bold">Aktywne ogłoszenia</span>
+	<span class="font-18px skin-font-color1 bold"><%= @title %></span>
 	
-	<% if @advertisments.any? %>
-		<ul class="ad-list">
-			<% @advertisments.each do |advertisment| %>
-				<li class="ad-prev">
-					<span class="skin-font-color9 semibold font-12px">Zlecenie: </span><span class="semibold font-12px"><%= advertisment.title %></span>
-					<div class="meta-info">
-						<span class="bold">Kategorie: </span><span class="second-span">
-						<% advertisment.categories.each do |category| %>
-							<%= category.name %>
-						<% end %>
-						</span>
-						<span class="bold">Lokalizacja: </span><span class="second-span">Cała Polska</span>
-						<span class="bold">Budżet: </span><span class="second-span"><%= advertisment.price %>zł</span> 	
-						<span class="bold">Wystawione: </span><span class="second-span"><%= date_issue advertisment.created_at %></span> 
-						<span class="bold">Do końca: </span><span class="second-span">7 dni</span>
-						<span class="bold">Ilość ofert: </span><span class="second-span"><%= advertisment.offers.count %></span> 
-					</div>
-					<a href="#" class="button skin-font-color2 skin-background-color9 skin-background-hover1 bold">Zobacz ogłoszenie</a>
-					<a href="#" class="button skin-font-color2 skin-background-color3 skin-background-hover1 bold">Edytuj</a>
-					<a href="#" class="button skin-font-color2 skin-background-color3 skin-background-hover1 bold">Zakończ</a>
-				</li>
-			<% end %>
-		</ul>
+	<%
+	case @layout
+	when 'mod' %>
+		<%= render 'advertisments_mod', object: @advertisments %>
+	<% when 'winner' %>
+		<%= render 'advertisments_winner', object: @advertisments %>
+	<% when 'ended' %>
+		<%= render 'advertisments_ended', object: @advertisments %>
+	<% else %>
+		<%= render 'advertisments_active', object: @advertisments %>
 	<% end %>
 
 	<%= paginate @advertisments %>

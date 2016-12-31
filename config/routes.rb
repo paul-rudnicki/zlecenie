@@ -11,10 +11,13 @@ Rails.application.routes.draw do
   get 'panel/profil' => 'panel/dashboard#profil'
   get 'panel/ustawienia' => 'panel/dashboard#settings'
   get 'panel/weryfikacja' => 'panel/dashboard#verify'
+  get 'panel/dodaj-ogloszenie' => 'panel/advertisments#new'
+
 
   namespace :panel do
     resources :dashboard, only: [:cockpit, :advertisments, :offers, :profile, :settings, :verify]
     resources :sessions, only: [:new, :create, :destroy]
+    resources :advertisments, only: [:new, :create, :edit, :update]
   end
 
 end

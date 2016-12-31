@@ -37,12 +37,13 @@ user2 = User.create!(
 		name: city,
 		slug: city.parameterize
 	)
-
+	
 	advertisment = Advertisment.create(
 		title: Faker::Name.title,
 		content: Faker::Lorem.paragraphs,
 		price: Faker::Commerce.price,
-		user: user
+		user: user,
+		ended: Time.now + rand(2..30).days
 	)
 
 	advertisment_categorie = AdvertismentCategory.create(
